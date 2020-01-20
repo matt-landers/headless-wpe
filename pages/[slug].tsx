@@ -21,8 +21,11 @@ const Post = props => {
 
   return (
     <Layout>
+      <h2>Headless WPE</h2>
       <h1>{post?.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post?.content }} />
+      <article className="post">
+        <div dangerouslySetInnerHTML={{ __html: post?.content }} />
+      </article>
     </Layout>
   );
 };
