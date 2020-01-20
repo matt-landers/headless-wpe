@@ -5,7 +5,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { Layout } from "../components/layout";
 
-const Home = props => {
+const Home = () => {
   const { data } = useQuery(gql`
     query {
       posts {
