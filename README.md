@@ -17,6 +17,10 @@ If you have any questions or if you'd like to see more tutorials on headless, le
 
 # Are you doing headless now?
 
-If the answer is yes, reach out to me! 
+If the answer is yes, reach out to me!
 
 I want to understand your use cases so that we build solutions that work for you 🚀
+
+### Testing Fugax
+
+Test
