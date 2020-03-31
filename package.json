@@ -19,7 +19,7 @@
     "@types/react": "^16.9.17",
     "apollo-boost": "^0.4.7",
     "graphql": "^14.5.8",
-    "next": "^9.1.7",
+    "next": "^9.3.2",
     "next-apollo": "^3.1.10",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
