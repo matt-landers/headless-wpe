@@ -27,17 +27,17 @@ const Home = () => {
         <title>Headless WPE Blog</title>
       </Head>
       <header>
-        <h1>Headless WPE</h1>
+        <h1>Headless WPE Blog</h1>
       </header>
       {posts &&
-        posts.map(post => (
+        posts.map((post) => (
           <article key={post.id}>
             <h2>
               <Link href={`/[slug]`} as={`/${post.slug}`}>
                 <a>{post.title}</a>
               </Link>
             </h2>
-            <div dangerouslySetInnerHTML={{__html: post.excerpt}} />
+            <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
           </article>
         ))}
     </Layout>
