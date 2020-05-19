@@ -3,9 +3,14 @@ import { useQuery } from "@apollo/react-hooks";
 import withData from "../lib/apollo";
 import Link from "next/link";
 import Head from "next/head";
+import { NextComponentType, NextPageContext } from "next";
 import { Layout } from "../components/layout";
 
-const Home = () => {
+interface HomeProps {
+  DEBUG: string;
+}
+
+const Home: NextComponentType<NextPageContext, {}, HomeProps> = ({ DEBUG }) => {
   const { data } = useQuery(gql`
     query {
       posts {
@@ -27,7 +32,7 @@ const Home = () => {
         <title>Headless WPE Blog</title>
       </Head>
       <header>
-        <h1>Headless WPE</h1>
+        <h1>Headless WPE {DEBUG == "1" ? "(Development)" : ""}</h1>
       </header>
       {posts &&
         posts.map((post) => (
@@ -42,6 +47,12 @@ const Home = () => {
         ))}
     </Layout>
   );
+};
+
+Home.getInitialProps = (context) => {
+  return {
+    DEBUG: process.env.DEBUG,
+  };
 };
 
 export default withData(Home);
