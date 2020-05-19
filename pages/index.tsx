@@ -32,7 +32,7 @@ const Home: NextComponentType<NextPageContext, {}, HomeProps> = ({ DEBUG }) => {
         <title>Headless WPE Blog</title>
       </Head>
       <header>
-        <h1>Headless WPE {DEBUG == "1" ? "(Development)" : ""}</h1>
+        <h1>Headless WP Engine {DEBUG == "1" ? "(Development)" : ""}</h1>
       </header>
       {posts &&
         posts.map((post) => (
