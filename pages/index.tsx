@@ -1,6 +1,6 @@
 import { gql } from "apollo-boost";
 import { useQuery } from "@apollo/react-hooks";
-import withData from "../lib/apollo";
+import withApollo from "../lib/apollo";
 import Link from "next/link";
 import Head from "next/head";
 import { NextComponentType, NextPageContext } from "next";
@@ -55,4 +55,4 @@ Home.getInitialProps = (context) => {
   };
 };
 
-export default withData(Home);
+export default withApollo()(Home);
