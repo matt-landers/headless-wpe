@@ -1,6 +1,6 @@
 import { gql } from "apollo-boost";
 import { useQuery } from "@apollo/react-hooks";
-import withData from "../lib/apollo";
+import withApollo from "../lib/apollo";
 import { useRouter } from "next/router";
 import { Layout } from "../components/layout";
 
@@ -30,4 +30,4 @@ const Post = () => {
   );
 };
 
-export default withData(Post);
+export default withApollo()(Post);

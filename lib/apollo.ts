@@ -1,10 +1,9 @@
-import { withData } from "next-apollo";
-import { HttpLink } from "apollo-boost";
+import { withApollo } from "next-apollo";
+import ApolloClient, { InMemoryCache } from "apollo-boost";
 
-const config = {
-  link: new HttpLink({
-    uri: "https://headlesswpe.wpengine.com/graphql"
-  })
-};
+const apolloClient = new ApolloClient({
+  uri: "https://headlesswpe.wpengine.com/graphql",
+  cache: new InMemoryCache(),
+});
 
-export default withData(config);
+export default withApollo(apolloClient);
