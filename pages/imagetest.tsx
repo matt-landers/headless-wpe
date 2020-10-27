@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-export default () => {
+const ImageTest = () => {
   const router = useRouter();
 
   const width: number = parseInt(router?.query?.width as string) || 480;
@@ -16,3 +16,5 @@ export default () => {
     />
   );
 };
+
+export default ImageTest;
