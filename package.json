@@ -17,7 +17,7 @@
     "@apollo/react-ssr": "^4.0.0",
     "apollo-boost": "^0.4.9",
     "graphql": "^15.3.0",
-    "next": "^10.0.0",
+    "next": "^11.1.0",
     "next-apollo": "^5.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
